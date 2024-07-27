@@ -1,4 +1,5 @@
-import { data } from "../../../data";
+import { data } from "../../../data/louann";
+// import { data } from "../../../data/carla";
 
 export async function GET(
     request: Request,

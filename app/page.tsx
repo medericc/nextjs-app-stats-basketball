@@ -4,6 +4,10 @@ import * as React from 'react';
 import { Check, ChevronsUpDown } from 'lucide-react';
 import { IFoodStat, IStats } from './types/index';
 import { cn } from '@/lib/utils';
+import 'ldrs/ring';
+import 'ldrs/grid'; // Import the l-grid package
+import { grid } from 'ldrs';
+grid.register();
 import { Button } from '@/components/ui/button';
 import {
   Command,
@@ -50,7 +54,7 @@ export default function Home() {
       const response = await fetch('/api/foods/all');
       const data = await response.json();
       const foodsReduced: IFoodStat[] = data.map((food: IStats) => ({
-        id: food.id, // Assuming each food item has a unique id
+        id: food.id,
         value: food.name.toLowerCase().replace(/ /g, '-'),
         label: food.name,
       }));
@@ -132,7 +136,7 @@ export default function Home() {
         </div>
       ) : (
         <div className='flex justify-center items-center h-screen bg-gray-900 text-white'>
-          <p className='text-2xl'>Loading...</p>
+          <l-grid size="60" speed="1.5" color="rgb(29, 128, 221)"></l-grid>
         </div>
       )}
     </>

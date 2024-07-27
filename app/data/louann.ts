@@ -1,4 +1,4 @@
-import { IStats } from "./types/index";
+import { IStats } from "../types/index";
 
 export const data: IStats[] = [
   {

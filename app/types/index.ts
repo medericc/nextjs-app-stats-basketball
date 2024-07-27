@@ -1,6 +1,8 @@
+// types/index.ts
+
 export interface IStats {
     name: string;
-    id:string;
+    id: string;
     date: string; // ajout de la propriété date
     opponent: string;
     min: number;
@@ -24,11 +26,19 @@ export interface IStats {
 export interface IFoodStat {
     value: string;
     label: string;
-    id:string;
+    id: string;
 }
 
 export interface Data {
     name: 'carbohydrates' | 'protein' | 'fat';
     value: number;
-    id:string;
+    id: string;
+}
+
+declare global {
+    namespace JSX {
+        interface IntrinsicElements {
+            'l-grid': { size?: string | number; speed?: string | number; color?: string };
+        }
+    }
 }

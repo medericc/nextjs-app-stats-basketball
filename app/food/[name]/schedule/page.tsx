@@ -1,6 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import { data } from '../../../data'; // Ajustez le chemin selon l'emplacement réel
+import { data } from '../../../data/louann'; // Ajustez le chemin selon l'emplacement réel
 import { Undo2 } from 'lucide-react';
 
 const SchedulePage = ({ params }: { params: { name: string } }) => {
