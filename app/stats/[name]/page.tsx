@@ -134,7 +134,7 @@ const { wait, match } = record();
                 className="rounded-full object-cover mb-4"
               />
               <Link 
-                href={`/food/${playerName}/schedule`} 
+                href={`/stats/${playerName}/schedule`} 
                 className="bg-blue-700 p-3 rounded-2xl text-gray-100 hover:underline mt-2"
               >
                 Voir le programme

@@ -8,7 +8,7 @@ const FoodPage = ({ params }: { params: { name: string }}) => {
   const playerName = params.name;
 
   const handleGoHome = () => {
-    router.push(`/food/${playerName}`);
+    router.push(`/stats/${playerName}`);
   };
 
   return (

@@ -118,6 +118,8 @@ export default function Home() {
                           setValue(food.value);
                           setOpen(false);
                         }}
+                        aria-selected={value === food.value}
+                        data-selected={value === food.value}
                       >
                         <Check
                           className={cn(
