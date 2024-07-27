@@ -13,10 +13,18 @@ const FoodPage = ({ params }: { params: { name: string }}) => {
   const playerName = params.name;
   const [selectedSeason, setSelectedSeason] = useState<string | null>(null);
   const [playerData, setPlayerData] = useState<IStats[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [isDetailsVisible, setIsDetailsVisible] = useState(false);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [isDetailsVisible, setIsDetailsVisible] = useState<boolean>(false);
+  const [Beautiful, setBeautiful] = useState<boolean>(false);
+
+
 
   useEffect(() => {
+    if (playerName === "carla" || playerName === "lucile") {
+      setBeautiful(true);
+    } else {
+      setBeautiful(false);
+    }
     const loadData = async () => {
       const fetchData = dataMapping[playerName];
 
@@ -135,8 +143,7 @@ const { wait, match } = record();
               />
               <Link 
                 href={`/stats/${playerName}/schedule`} 
-                className="bg-blue-700 p-3 rounded-2xl text-gray-100 hover:underline mt-2"
-              >
+                className={`${Beautiful ? 'bg-red-700' : 'bg-blue-700'} p-3 rounded-2xl text-gray-100 hover:underline mt-2`}    >
                 Voir le programme
               </Link> 
             </div>
@@ -147,8 +154,8 @@ const { wait, match } = record();
             <div className="w-full md:w-2/3 lg:w-3/4 mb-2 md:mb-0 flex flex-col items-center">
               <div className="flex gap-4 mb-2">
               <div
-        className="relative flex items-center justify-center w-24 h-24 bg-blue-700 text-white text-center rounded-full shadow-lg col-span-2 mt-4"
-        onClick={handleClick}
+             className={`relative flex items-center justify-center w-24 h-24 ${Beautiful ? 'bg-red-700' : 'bg-blue-700'} text-white text-center rounded-full shadow-lg col-span-2 mt-4`}
+             onClick={handleClick}
       >
         {!isDetailsVisible ? (
           <>
@@ -162,12 +169,10 @@ const { wait, match } = record();
           </>
         )}
       </div>
-                <div className="relative flex items-center justify-center w-24 h-24 bg-blue-700 text-white text-center rounded-full shadow-lg col-span-2 mt-4">
-                  <span className="text-xl font-bold mb-5">{averages.ast}</span>
+      <div className={`relative flex items-center justify-center w-24 h-24 ${Beautiful ? 'bg-red-700' : 'bg-blue-700'} text-white text-center rounded-full shadow-lg col-span-2 mt-4`}>    <span className="text-xl font-bold mb-5">{averages.ast}</span>
                   <div className="absolute bottom-6 text-sm">Passes</div>
                 </div>
-                <div className="relative flex items-center justify-center w-24 h-24 bg-blue-700 text-white text-center rounded-full shadow-lg col-span-2 mt-4">
-                  <span className="text-xl font-bold mb-5">{averages.reb}</span>
+                <div className={`relative flex items-center justify-center w-24 h-24 ${Beautiful ? 'bg-red-700' : 'bg-blue-700'} text-white text-center rounded-full shadow-lg col-span-2 mt-4`}>  <span className="text-xl font-bold mb-5">{averages.reb}</span>
                   <div className="absolute bottom-6 text-sm">Rebonds</div>
                 </div>
               </div>
@@ -178,8 +183,8 @@ const { wait, match } = record();
 
       <div className="flex flex-col mt-8 md:flex-row items-center md:items-start p-4 bg-gray-900 rounded-xl overflow-x-auto">
         <div className="flex gap-5 mb-3">
-          <button onClick={() => setSelectedSeason('2023/2024')} className={`p-2 rounded-lg ${selectedSeason === '2023/2024' ? 'bg-blue-700 text-white' : 'bg-gray-700 text-white'}`}>2023/2024</button>
-          <button onClick={() => setSelectedSeason('2024/2025')} className={`p-2 rounded-lg ${selectedSeason === '2024/2025' ? 'bg-blue-700 text-white' : 'bg-gray-700 text-white'}`}>2024/2025</button>
+        <button onClick={() => setSelectedSeason('2023/2024')} className={`p-2 rounded-lg ${selectedSeason === '2023/2024' ? (Beautiful ? 'bg-red-700 text-white' : 'bg-blue-700 text-white') : 'bg-gray-700 text-white'}`}>2023/2024</button>
+          <button onClick={() => setSelectedSeason('2024/2025')} className={`p-2 rounded-lg ${selectedSeason === '2024/2025' ? (Beautiful ? 'bg-red-700 text-white' : 'bg-blue-700 text-white'): 'bg-gray-700 text-white'}`}>2024/2025</button>
         </div>
         <div className="w-full overflow-x-auto">
           <table className="w-full h-full bg-gray-900 text-white rounded-lg shadow-inner">
