@@ -3,7 +3,7 @@ import { IStats } from "./types"; // Assurez-vous que le chemin est correct
 const dataMapping: {
   [key: string]: () => Promise<{ data: IStats[] }>; // Signature d'index
 } = {
-  Louann: () => import('./data/louann').then(module => module), // Assurez-vous que le module exporte un objet avec une propriété 'data'
+  louann: () => import('./data/louann').then(module => module), // Assurez-vous que le module exporte un objet avec une propriété 'data'
   carla: () => import('./data/carla'),
   // mp: () => import('./data/mp'),
   // lulu: () => import('./data/lulu'),

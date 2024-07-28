@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import { Check, ChevronsUpDown } from 'lucide-react';
-import { IFoodStat, IStats } from './types/index';
 import { cn } from '@/lib/utils';
 import 'ldrs/ring';
 import 'ldrs/grid'; // Import the l-grid package
@@ -32,7 +31,7 @@ const CommandItem = React.forwardRef<
   <RadixCommandItem
     ref={ref}
     className={cn(
-      'relative flex cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none aria-selected:bg-accent aria-selected:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+      "relative flex cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none aria-selected:bg-accent aria-selected:text-accent-foreground pointer-events-auto",
       className
     )}
     {...props}
@@ -54,7 +53,7 @@ export default function Home() {
 
   React.useEffect(() => {
     if (value.length > 0) {
-      router.push(`/food/${value}`);
+      router.push(`/stats/${value}`);
     }
   }, [value, router]);
 
@@ -63,9 +62,11 @@ export default function Home() {
     value: key.toLowerCase().replace(/ /g, '-'),
     label: key
   }));
+
   const capitalizeFirstLetter = (name: string) => {
     return name.charAt(0).toUpperCase() + name.slice(1);
   };
+
   return (
     <>
       {!isLoading ? (
@@ -102,13 +103,11 @@ export default function Home() {
                     {foodOptions.map((food) => (
                       <CommandItem
                         key={food.id}
-                        onClick={() => {
+                        onMouseDown={() => {
                           console.log('Selected food:', food.value);
                           setValue(food.value);
                           setOpen(false);
                         }}
-                        aria-selected={value === food.value}
-                        data-selected={value === food.value}
                       >
                         <Check
                           className={cn(
