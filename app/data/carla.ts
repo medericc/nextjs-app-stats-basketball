@@ -4,7 +4,7 @@ export const data: IStats[] = [
   {
     id: "1",
     name: "Carla",
-    date: "2022",
+    date: "2022", an:"2023",
     opponent: "landerneau",
     min: 23,
     fgm: 4,
@@ -26,7 +26,7 @@ export const data: IStats[] = [
   {
     id: "2",
     name: "Carla",
-    date: "2022",
+    date: "2022", an:"2023",
     opponent: "lattes",
     min: 21,
     fgm: 2,
@@ -48,7 +48,7 @@ export const data: IStats[] = [
   {
     id: "3",
     name: "Carla",
-    date: "2022",
+    date: "2022", an:"2023",
     opponent: "feytiat",
     min: 15,
     fgm: 2,
@@ -70,7 +70,7 @@ export const data: IStats[] = [
   {
     id: "4",
     name: "Carla",
-    date: "2022",
+    date: "2022", an:"2023",
     opponent: "st amand",
     min: 7,
     fgm: 0,
@@ -92,7 +92,7 @@ export const data: IStats[] = [
   {
     id: "5",
     name: "Carla",
-    date: "2022",
+    date: "2022", an:"2023",
     opponent: "st amand",
     min: 14,
     fgm: 3,
@@ -114,7 +114,7 @@ export const data: IStats[] = [
   {
     id: "6",
     name: "Carla",
-    date: "2022",
+    date: "2022", an:"2023",
     opponent: "lyon",
     min: 22,
     fgm: 5,
@@ -136,7 +136,7 @@ export const data: IStats[] = [
   {
     id: "7",
     name: "Carla",
-    date: "2022",
+    date: "2022", an:"2023",
     opponent: "bmdm",
     min: 22,
     fgm: 4,
@@ -158,7 +158,7 @@ export const data: IStats[] = [
   {
     id: "8",
     name: "Carla",
-    date: "2022",
+    date: "2022", an:"2023",
     opponent: "angers",
     min: 14,
     fgm: 0,
@@ -180,7 +180,7 @@ export const data: IStats[] = [
   {
     id: "9",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "flammes",
     min: 14,
     fgm: 1,
@@ -202,7 +202,7 @@ export const data: IStats[] = [
   {
     id: "10",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "tmb",
     min: 27,
     fgm: 4,
@@ -224,7 +224,7 @@ export const data: IStats[] = [
   {
     id: "11",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "roche",
     min: 28,
     fgm: 4,
@@ -246,7 +246,7 @@ export const data: IStats[] = [
   {
     id: "12",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "esbva",
     min: 36,
     fgm: 4,
@@ -268,7 +268,7 @@ export const data: IStats[] = [
   {
     id: "13",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "laderneau",
     min: 23,
     fgm: 5,
@@ -290,7 +290,7 @@ export const data: IStats[] = [
   {
     id: "14",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "asvel",
     min: 28,
     fgm: 7,
@@ -312,7 +312,7 @@ export const data: IStats[] = [
   {
     id: "15",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "lattes",
     min: 32,
     fgm: 4,
@@ -334,7 +334,7 @@ export const data: IStats[] = [
   {
     id: "16",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "bourges",
     min: 39,
     fgm: 4,
@@ -356,7 +356,7 @@ export const data: IStats[] = [
   {
     id: "17",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "st amand",
     min: 35,
     fgm: 2,
@@ -378,7 +378,7 @@ export const data: IStats[] = [
   {
     id: "18",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "lyon",
     min: 33,
     fgm: 3,
@@ -400,7 +400,7 @@ export const data: IStats[] = [
   {
     id: "19",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "mdm",
     min: 41,
     fgm: 6,
@@ -422,7 +422,7 @@ export const data: IStats[] = [
   {
     id: "20",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "ufab",
     min: 30,
     fgm: 4,
@@ -444,7 +444,7 @@ export const data: IStats[] = [
   {
     id: "21",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "tmb",
     min: 27,
     fgm: 1,
@@ -466,7 +466,7 @@ export const data: IStats[] = [
   {
     id: "22",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "flammes",
     min: 22,
     fgm: 5,
@@ -488,7 +488,7 @@ export const data: IStats[] = [
   {
     id: "23",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "roche",
     min: 38,
     fgm: 6,
@@ -510,7 +510,7 @@ export const data: IStats[] = [
   {
     id: "24",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "esbva",
     min: 29,
     fgm: 5,
@@ -532,7 +532,7 @@ export const data: IStats[] = [
   {
     id: "25",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "landerneau",
     min: 25,
     fgm: 5,
@@ -554,7 +554,7 @@ export const data: IStats[] = [
   {
     id: "26",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "tmb",
     min: 40,
     fgm: 4,
@@ -576,7 +576,7 @@ export const data: IStats[] = [
   {
     id: "27",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "st amand",
     min: 29,
     fgm: 6,
@@ -598,7 +598,7 @@ export const data: IStats[] = [
   {
     id: "28",
     name: "Carla",
-    date: "2023",
+    date: "2023", an:"2023",
     opponent: "landerneau",
     min: 31,
     fgm: 2,
@@ -619,7 +619,7 @@ export const data: IStats[] = [
   },
   {
     id: "29",
-    name: "Carla",
+    name: "Carla", an:"2024",
     date: "2023",
     opponent: "finlande",
     min: 19,
@@ -641,7 +641,7 @@ export const data: IStats[] = [
   },
   {
     id: "30",
-    name: "Carla",
+    name: "Carla", an:"2024",
     date: "2023",
     opponent: "lituanie",
     min: 19,
@@ -663,7 +663,7 @@ export const data: IStats[] = [
   },
   {
     id: "31",
-    name: "Carla",
+    name: "Carla", an:"2024",
     date: "2023",
     opponent: "hongrie",
     min: 23,
@@ -685,7 +685,7 @@ export const data: IStats[] = [
   },
   {
     id: "32",
-    name: "Carla",
+    name: "Carla", an:"2024",
     date: "2023",
     opponent: "tchequie",
     min: 18,
@@ -707,7 +707,7 @@ export const data: IStats[] = [
   },
   {
     id: "33",
-    name: "Carla",
+    name: "Carla", an:"2024",
     date: "2023",
     opponent: "italie",
     min: 31,
@@ -729,7 +729,7 @@ export const data: IStats[] = [
   },
   {
     id: "34",
-    name: "Carla",
+    name: "Carla", an:"2024",
     date: "2023",
     opponent: "espagne",
     min: 24,
@@ -751,7 +751,7 @@ export const data: IStats[] = [
   },
   {
     id: "35",
-    name: "Carla",
+    name: "Carla", an:"2024",
     date: "2023",
     opponent: "lettonie",
     min: 26,
@@ -773,7 +773,7 @@ export const data: IStats[] = [
   },
   {
     id: "36",
-    name: "Carla",
+    name: "Carla", an:"2024",
     date: "2023",
     opponent: "esbva",
     min: 40,
@@ -795,7 +795,7 @@ export const data: IStats[] = [
   },
   {
     id: "37",
-    name: "Carla",
+    name: "Carla", an:"2024",
     date: "2023",
     opponent: "charnay",
     min: 40,
@@ -817,7 +817,7 @@ export const data: IStats[] = [
   },
   {
     id: "38",
-    name: "Carla",
+    name: "Carla", an:"2024",
     date: "2023",
     opponent: "st amnand",
     min: 37,
@@ -839,7 +839,7 @@ export const data: IStats[] = [
   },
   {
     id: "39",
-    name: "Carla",
+    name: "Carla", an:"2024",
     date: "2023",
     opponent: "asvel",
     min: 40,
@@ -861,7 +861,7 @@ export const data: IStats[] = [
   },
   {
     id: "40",
-    name: "Carla",
+    name: "Carla", an:"2024",
     date: "2023",
     opponent: "basket landes",
     min: 40,
@@ -883,7 +883,7 @@ export const data: IStats[] = [
   },
   {
     id: "41",
-    name: "Carla",
+    name: "Carla", an:"2024",
     date: "2023",
     opponent: "toulouse",
     min: 28,
@@ -905,7 +905,7 @@ export const data: IStats[] = [
   },
   {
     id: "42",
-    name: "Carla",
+    name: "Carla", an:"2024",
     date: "2023",
     opponent: "landerneau",
     min: 39,
@@ -927,7 +927,7 @@ export const data: IStats[] = [
   },
   {
     id: "43",
-    name: "Carla",
+    name: "Carla", an:"2024",
     date: "2023",
     opponent: "roche vendee",
     min: 36,
@@ -949,7 +949,7 @@ export const data: IStats[] = [
   },
   {
     id: "44",
-    name: "Carla",
+    name: "Carla", an:"2024",
     date: "2023",
     opponent: "agners",
     min: 40,
@@ -972,7 +972,7 @@ export const data: IStats[] = [
   {
     id: "45",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "esbva",
     min: 37,
     fgm: 4,
@@ -994,7 +994,7 @@ export const data: IStats[] = [
   {
     id: "46",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "charnay",
     min: 40,
     fgm: 7,
@@ -1016,7 +1016,7 @@ export const data: IStats[] = [
   {
     id: "47",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "lattes",
     min: 34,
     fgm: 3,
@@ -1038,7 +1038,7 @@ export const data: IStats[] = [
   {
     id: "48",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "st amand",
     min: 38,
     fgm: 5,
@@ -1060,7 +1060,7 @@ export const data: IStats[] = [
   {
     id: "49",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "lyon",
     min: 38,
     fgm: 11,
@@ -1082,7 +1082,7 @@ export const data: IStats[] = [
   {
     id: "50",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "landes",
     min: 31,
     fgm: 1,
@@ -1104,7 +1104,7 @@ export const data: IStats[] = [
   {
     id: "51",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "landerneau",
     min: 37,
     fgm: 4,
@@ -1126,7 +1126,7 @@ export const data: IStats[] = [
   {
     id: "52",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "flammes",
     min: 38,
     fgm: 4,
@@ -1148,7 +1148,7 @@ export const data: IStats[] = [
   {
     id: "53",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "landes",
     min: 45,
     fgm: 7,
@@ -1170,7 +1170,7 @@ export const data: IStats[] = [
   {
     id: "54",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "roche vendee",
     min: 33,
     fgm: 5,
@@ -1192,7 +1192,7 @@ export const data: IStats[] = [
   {
     id: "55",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "lattes",
     min: 35,
     fgm: 5,
@@ -1214,7 +1214,7 @@ export const data: IStats[] = [
   {
     id: "56",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "bourges",
     min: 32,
     fgm: 6,
@@ -1236,7 +1236,7 @@ export const data: IStats[] = [
   {
     id: "57",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "angers",
     min: 30,
     fgm: 5,
@@ -1258,7 +1258,7 @@ export const data: IStats[] = [
   {
     id: "58",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "bourges",
     min: 37,
     fgm: 5,
@@ -1280,7 +1280,7 @@ export const data: IStats[] = [
   {
     id: "59",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "bourges",
     min: 38,
     fgm: 9,
@@ -1302,7 +1302,7 @@ export const data: IStats[] = [
   {
     id: "60",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "landes",
     min: 40,
     fgm: 5,
@@ -1324,7 +1324,7 @@ export const data: IStats[] = [
   {
     id: "61",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "landes",
     min: 32,
     fgm: 4,
@@ -1346,7 +1346,7 @@ export const data: IStats[] = [
   {
     id: "62",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "finlande",
     min: 20,
     fgm: 2,
@@ -1368,7 +1368,7 @@ export const data: IStats[] = [
   {
     id: "63",
     name: "Carla",
-    date: "2024",
+    date: "2024", an:"2024",
     opponent: "finlande",
     min: 32,
     fgm: 3,

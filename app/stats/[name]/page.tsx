@@ -112,13 +112,12 @@ const { wait, match } = record();
   // Filtrer les matchs par saison sélectionnée
   const filteredData = selectedSeason ? playerData.filter((game) => {
     if (selectedSeason === '2023/2024') {
-      return game.date.match(/\/(0[1-6])\/24$/);
+      return game.an === '2024';
     } else if (selectedSeason === '2024/2025') {
-      return game.date.match(/\/07\/24$/) || game.date.endsWith('/25');
+      return game.an === '2025';
     }
     return true;
   }) : playerData;
-
   const capitalizeFirstLetter = (name: string) => {
     return name.charAt(0).toUpperCase() + name.slice(1);
   };
@@ -128,63 +127,70 @@ const { wait, match } = record();
   
   return (
     <div className="p-8 text-white">
-      <Undo2 className="cursor-pointer mb-5 text-white" onClick={() => router.back()} />
+    <Undo2 className="cursor-pointer mb-5 text-white" onClick={() => router.back()} />
+    <div className="flex flex-col m-2">
       <div className="flex flex-col md:flex-row items-center md:items-start">
-        <div className="flex justify-center flex-col md:flex-row items-center md:items-start">
-          <div className="w-full md:w-1/3 lg:w-1/4 mb-8 md:mb-0 md:ml-8 lg:ml-12 flex items-center">
-            <div className="bg-gray-900 text-white py-4 px-20 rounded-lg shadow-inner flex flex-col items-center md:items-start">
-              <h2 className="text-3xl font-bold mb-6 text-center md:text-left">{capitalizedPlayerName} Stats</h2>
-              <Image 
-                src={`/${playerName.toLowerCase()}.jpg`}  
-                alt={playerName}         
-                width={130}            
-                height={130}             
-                className="rounded-full object-cover mb-4"
-              />
-              <Link 
-                href={`/stats/${playerName}/schedule`} 
-                className={`${Beautiful ? 'bg-red-700' : 'bg-blue-700'} p-3 rounded-2xl text-gray-100 hover:underline mt-2`}    >
-                Voir le programme
-              </Link> 
-            </div>
+        <div className="w-full md:w-1/3 lg:w-1/4 mb-8 md:mb-0 md:ml-8 lg:ml-12 flex justify-center">
+          <div className="bg-gray-900 text-white py-4 px-20 rounded-lg shadow-inner flex flex-col items-center md:items-start">
+            <h2 className="text-3xl font-bold mb-6 text-center md:text-left">{capitalizedPlayerName} Stats</h2>
+            <Image 
+              src={`/${playerName.toLowerCase()}.jpg`}  
+              alt={playerName}         
+              width={130}            
+              height={130}             
+              className="rounded-full object-cover mb-4"
+            />
+            <Link 
+              href={`/stats/${playerName}/schedule`} 
+              className={`${Beautiful ? 'bg-red-700' : 'bg-blue-700'} p-3 rounded-2xl text-gray-100 hover:underline mt-2`}>
+              Voir le programme
+            </Link> 
           </div>
         </div>
-        <div className="flex flex-col md:flex-row items-center md:items-start p-4 bg-gray-900 rounded-xl">
-          <div className="flex justify-center flex-col md:flex-row items-center md:items-start">
-            <div className="w-full md:w-2/3 lg:w-3/4 mb-2 md:mb-0 flex flex-col items-center">
-              <div className="flex gap-4 mb-2">
-              <div
-             className={`relative flex items-center justify-center w-24 h-24 ${Beautiful ? 'bg-red-700' : 'bg-blue-700'} text-white text-center rounded-full shadow-lg col-span-2 mt-4`}
-             onClick={handleClick}
-      >
-        {!isDetailsVisible ? (
-          <>
-            <span className="text-xl font-bold mb-5">{averages.pts}</span>
-            <div className="absolute bottom-6 text-sm">Points</div>
-          </>
-        ) : (
-          <>
-            <span className="text-xl font-bold mb-5">{wait}</span>
-            <div className="absolute bottom-6 text-sm">Reste : {match}</div>
-          </>
-        )}
-      </div>
-      <div className={`relative flex items-center justify-center w-24 h-24 ${Beautiful ? 'bg-red-700' : 'bg-blue-700'} text-white text-center rounded-full shadow-lg col-span-2 mt-4`}>    <span className="text-xl font-bold mb-5">{averages.ast}</span>
-                  <div className="absolute bottom-6 text-sm">Passes</div>
-                </div>
-                <div className={`relative flex items-center justify-center w-24 h-24 ${Beautiful ? 'bg-red-700' : 'bg-blue-700'} text-white text-center rounded-full shadow-lg col-span-2 mt-4`}>  <span className="text-xl font-bold mb-5">{averages.reb}</span>
-                  <div className="absolute bottom-6 text-sm">Rebonds</div>
-                </div>
-              </div>
+        <div className="w-full md:w-2/3 lg:w-3/4 p-4 bg-gray-900 rounded-xl flex flex-col items-center">
+          <div className="flex flex-wrap gap-4 justify-center w-full">
+            <div 
+              className={`relative flex items-center justify-center w-24 h-24 ${Beautiful ? 'bg-red-700' : 'bg-blue-700'} text-white text-center rounded-full shadow-lg`}
+              onClick={handleClick}>
+              {isDetailsVisible &&  playerName === "carla" ? (
+                 <>
+                 <span className="text-xl font-bold mb-5">{wait}</span>
+                 <div className="absolute bottom-6 text-sm">Reste : {match}</div>
+               </>
+              ) : (
+               
+                <>
+                <span className="text-xl font-bold mb-5">{averages.pts}</span>
+                <div className="absolute bottom-6 text-sm">Points</div>
+              </>
+              )}
+            </div>
+            <div 
+              className={`relative flex items-center justify-center w-24 h-24 ${Beautiful ? 'bg-red-700' : 'bg-blue-700'} text-white text-center rounded-full shadow-lg`}>
+              <span className="text-xl font-bold mb-5">{averages.ast}</span>
+              <div className="absolute bottom-6 text-sm">Passes</div>
+            </div>
+            <div 
+              className={`relative flex items-center justify-center w-24 h-24 ${Beautiful ? 'bg-red-700' : 'bg-blue-700'} text-white text-center rounded-full shadow-lg`}>
+              <span className="text-xl font-bold mb-5">{averages.reb}</span>
+              <div className="absolute bottom-6 text-sm">Rebonds</div>
             </div>
           </div>
         </div>
       </div>
-
+  
       <div className="flex flex-col mt-8 md:flex-row items-center md:items-start p-4 bg-gray-900 rounded-xl overflow-x-auto">
         <div className="flex gap-5 mb-3">
-        <button onClick={() => setSelectedSeason('2023/2024')} className={`p-2 rounded-lg ${selectedSeason === '2023/2024' ? (Beautiful ? 'bg-red-700 text-white' : 'bg-blue-700 text-white') : 'bg-gray-700 text-white'}`}>2023/2024</button>
-          <button onClick={() => setSelectedSeason('2024/2025')} className={`p-2 rounded-lg ${selectedSeason === '2024/2025' ? (Beautiful ? 'bg-red-700 text-white' : 'bg-blue-700 text-white'): 'bg-gray-700 text-white'}`}>2024/2025</button>
+          <button 
+            onClick={() => setSelectedSeason('2023/2024')} 
+            className={`p-2 rounded-lg ${selectedSeason === '2023/2024' ? (Beautiful ? 'bg-red-700 text-white' : 'bg-blue-700 text-white') : 'bg-gray-700 text-white'}`}>
+            2023/2024
+          </button>
+          <button 
+            onClick={() => setSelectedSeason('2024/2025')} 
+            className={`p-2 rounded-lg ${selectedSeason === '2024/2025' ? (Beautiful ? 'bg-red-700 text-white' : 'bg-blue-700 text-white'): 'bg-gray-700 text-white'}`}>
+            2024/2025
+          </button>
         </div>
         <div className="w-full overflow-x-auto">
           <table className="w-full h-full bg-gray-900 text-white rounded-lg shadow-inner">
@@ -226,6 +232,10 @@ const { wait, match } = record();
         </div>
       </div>
     </div>
+  </div>
+  
+  
+  
   );
 };
 

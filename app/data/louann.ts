@@ -4,6 +4,7 @@ export const data: IStats[] = [
   {
     id:"1",
     name: "Louann",
+    an:"2024",
     date: "14/01/24",
     opponent: "Georgia Tech",
    
@@ -27,6 +28,7 @@ export const data: IStats[] = [
   {
     name: "Louann",
     date: "25/01/24",
+    an:"2024",
     opponent: "Florida St",
    id:"2",
     min: 4,
@@ -49,6 +51,7 @@ export const data: IStats[] = [
   {
     name: "Louann",
     date: "01/02/24",
+    an:"2024",
     opponent: "Pittsburgh",
    id:"3",
     min: 2,
@@ -71,6 +74,7 @@ export const data: IStats[] = [
   {
     name: "Louann",
     date: "08/02/24",
+    an:"2024",
     opponent: "Wake Forest",
    id:"4",
     min: 2,
@@ -93,6 +97,7 @@ export const data: IStats[] = [
   {
     name: "Louann",
     date: "29/02/24",
+    an:"2024",
     opponent: "Virginia",
    id:"5",
     min: 1,

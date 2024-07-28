@@ -3,6 +3,7 @@
 export interface IStats {
     name: string;
     id: string;
+    an: string;
     date: string; // ajout de la propriété date
     opponent: string;
     min: number;
