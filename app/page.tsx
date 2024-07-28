@@ -23,6 +23,7 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { useRouter } from 'next/navigation';
+import dataMapping from './dataMapping'; // Import the dataMapping
 
 const CommandItem = React.forwardRef<
   React.ElementRef<typeof RadixCommandItem>,
@@ -43,32 +44,12 @@ CommandItem.displayName = RadixCommandItem.displayName;
 export default function Home() {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState('');
-  const [foods, setFoods] = React.useState<IFoodStat[]>([]);
   const [isLoading, setIsLoading] = React.useState<boolean>(true);
 
   const router = useRouter();
 
-  const fetchFoods = async () => {
-    try {
-      console.log('Fetching foods...');
-      const response = await fetch('/api/foods/all');
-      const data = await response.json();
-      const foodsReduced: IFoodStat[] = data.map((food: IStats) => ({
-        id: food.id,
-        value: food.name.toLowerCase().replace(/ /g, '-'),
-        label: food.name,
-      }));
-      setFoods(foodsReduced);
-      console.log('Foods fetched successfully');
-    } catch (error) {
-      console.error('Error fetching foods:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   React.useEffect(() => {
-    fetchFoods();
+    setIsLoading(false);
   }, []);
 
   React.useEffect(() => {
@@ -77,6 +58,14 @@ export default function Home() {
     }
   }, [value, router]);
 
+  const foodOptions = Object.keys(dataMapping).map(key => ({
+    id: key,
+    value: key.toLowerCase().replace(/ /g, '-'),
+    label: key
+  }));
+  const capitalizeFirstLetter = (name: string) => {
+    return name.charAt(0).toUpperCase() + name.slice(1);
+  };
   return (
     <>
       {!isLoading ? (
@@ -96,7 +85,7 @@ export default function Home() {
                 className='w-[300px] justify-between text-black bg-white dark:text-white dark:bg-gray-800 border-gray-700 z-10'
               >
                 {value
-                  ? foods.find((food) => food.value === value)?.label
+                  ? foodOptions.find((food) => food.value === value)?.label
                   : 'Select Player...'}
                 <ChevronsUpDown className='ml-2 h-4 w-4 shrink-0 opacity-50' />
               </Button>
@@ -110,7 +99,7 @@ export default function Home() {
                 <CommandEmpty>No player found.</CommandEmpty>
                 <CommandList>
                   <CommandGroup>
-                    {foods.map((food) => (
+                    {foodOptions.map((food) => (
                       <CommandItem
                         key={food.id}
                         onClick={() => {
@@ -127,7 +116,7 @@ export default function Home() {
                             value === food.value ? 'opacity-100' : 'opacity-0'
                           )}
                         />
-                        {food.label}
+                        {capitalizeFirstLetter(food.label)}
                       </CommandItem>
                     ))}
                   </CommandGroup>
