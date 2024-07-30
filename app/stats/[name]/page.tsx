@@ -155,9 +155,10 @@ const FoodPage = ({ params }: { params: { name: string } }) => {
     <div className='p-8 text-white'>
       <Undo2 className='cursor-pointer mb-5 text-white' onClick={() => router.back()} />
       <div className='flex flex-col m-2'>
-        <div className='flex flex-col md:flex-row items-center md:items-start'>
-          <div className='w-full md:w-1/3 lg:w-1/4 mb-8 md:mb-0 md:ml-8 lg:ml-12 flex justify-center'>
-            <div className='bg-gray-900 text-white py-4 px-20 rounded-lg shadow-inner flex flex-col items-center md:items-start'>
+        <div className='flex flex-col  items-center '>
+          <div className='w-full  lg:w-1/4 mb-8 md:mb-0  lg:ml-12 flex justify-center'>
+          <div className='bg-gray-900 text-white py-4 px-20 rounded-lg shadow-inner flex flex-col items-center sm:w-full  lg:mb-8'>
+
               <h2 className='text-3xl font-bold mb-6 text-center md:text-left'>
                 {capitalizedPlayerName} Stats
               </h2>
@@ -178,7 +179,7 @@ const FoodPage = ({ params }: { params: { name: string } }) => {
               </Link>
             </div>
           </div>
-          <div className='w-full md:w-2/3 lg:w-3/4 p-4 bg-gray-900 rounded-xl flex flex-col items-center'>
+          <div className='w-full md:w-2/3 lg:w-3/4 p-4  bg-gray-900 rounded-xl flex flex-col items-center'>
             <div className='flex flex-wrap gap-4 justify-center w-full'>
               <div
                 className={`relative flex items-center justify-center w-24 h-24 ${
@@ -218,7 +219,7 @@ const FoodPage = ({ params }: { params: { name: string } }) => {
           </div>
         </div>
 
-        <div className='flex flex-col mt-8 md:flex-row items-center md:items-start p-4 bg-gray-900 rounded-xl overflow-x-auto'>
+        <div className='flex flex-col mt-8  items-center  p-4 bg-gray-900 rounded-xl overflow-x-auto'>
           <div className='flex gap-5 mb-3'>
             {Visible && (
               <>
