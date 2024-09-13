@@ -1,7 +1,7 @@
-import React from 'react'; // Ajoutez cet import
+import React from 'react'; 
 import type { Metadata } from "next";
 
-// metadate dynalmque avec ett fct
+
 export function generateMetadata({ params }: { params: { name: string }}): Metadata {
     const title = `Discover ${params.name} - Stats`;
     const description = `Discover all stats of ${params.name} in this career. Explore now!`;

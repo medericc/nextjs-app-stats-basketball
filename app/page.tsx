@@ -4,7 +4,7 @@ import * as React from 'react';
 import { Check, ChevronsUpDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import 'ldrs/ring';
-import 'ldrs/grid'; // Import the l-grid package
+import 'ldrs/grid'; 
 import { grid } from 'ldrs';
 grid.register();
 import { Button } from '@/components/ui/button';
@@ -22,7 +22,7 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { useRouter } from 'next/navigation';
-import dataMapping from './dataMapping'; // Import the dataMapping
+import dataMapping from './dataMapping'; 
 
 const CommandItem = React.forwardRef<
   React.ElementRef<typeof RadixCommandItem>,

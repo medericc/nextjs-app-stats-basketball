@@ -38,15 +38,15 @@ const FoodPage = ({ params }: { params: { name: string } }) => {
             filterDataByYear(playerModule.data);
           } else {
             console.error(`No data property found for player ${playerName}`);
-            setPlayerData([]); // Assurez-vous de gérer l'état d'erreur de manière appropriée
+            setPlayerData([]); 
           }
         } catch (error) {
           console.error(`Failed to load data for player ${playerName}`, error);
-          setPlayerData([]); // Assurez-vous de gérer l'état d'erreur de manière appropriée
+          setPlayerData([]); 
         }
       } else {
         console.error(`No data found for player ${playerName}`);
-        setPlayerData([]); // Assurez-vous de gérer le cas où les données du joueur n'existent pas
+        setPlayerData([]); 
       }
 
       setLoading(false);
@@ -101,7 +101,7 @@ const FoodPage = ({ params }: { params: { name: string } }) => {
     );
   }
 
-  // Calculer les statistiques moyennes
+ 
   const averages = playerData.reduce(
     (acc, game) => {
       acc.pts += game.pts;
@@ -112,12 +112,12 @@ const FoodPage = ({ params }: { params: { name: string } }) => {
     { pts: 0, ast: 0, reb: 0 }
   );
 
-  // Fonction pour gérer le clic
+ 
   const handleClick = () => {
-    setIsDetailsVisible(!isDetailsVisible); // Affiche la div commentée
+    setIsDetailsVisible(!isDetailsVisible); 
   };
 
-  // Fonction pour calculer wait et match
+ 
   const record = () => {
     if (playerData.length < 77 && playerName === 'carla') {
       const wait = 1000 - averages.pts;
@@ -125,13 +125,13 @@ const FoodPage = ({ params }: { params: { name: string } }) => {
       return { wait, match };
     }
     console.log('erreur record');
-    return { wait: 0, match: 0 }; // Valeurs par défaut en cas d'erreur
+    return { wait: 0, match: 0 };
   };
 
-  // Appeler record pour obtenir wait et match
+ 
   const { wait, match } = record();
 
-  // Filtrer les matchs par saison sélectionnée
+ 
   const filteredData = selectedSeason
     ? playerData.filter((game) => {
         if (selectedSeason === '2023/2024' && game.an === '2024') {

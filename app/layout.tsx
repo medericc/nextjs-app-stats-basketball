@@ -10,7 +10,7 @@ const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 })
-// heade totu ca 
+
 export const metadata: Metadata = {
   title: "Player Stats",
   description: "Discover the statistics of your favorite players, whether from Mondeville, Duke, Rhode Island, ESBVA, or even Fenerbahce",

@@ -13,18 +13,18 @@ const SchedulePage = ({ params }: { params: { name: string } }) => {
 
   const capitalizedPlayerName = capitalizeFirstLetter(playerName);
 
-  // Utilisation d'un état pour simuler le chargement des données
+
   const [dataAvailable, setDataAvailable] = useState(false);
 
   useEffect(() => {
-    // Simule la vérification des données
+   
     const fetchData = async () => {
-      // Remplacez cette logique par la vérification réelle des données
-      const playerData = []; // Simule l'absence de données
+     
+      const playerData = [];
       setDataAvailable(playerData.length > 0);
 
       if (playerData.length === 0) {
-        router.push('/not-found'); // Redirection vers la page d'erreur
+        router.push('/not-found'); 
       }
     };
 
@@ -32,18 +32,17 @@ const SchedulePage = ({ params }: { params: { name: string } }) => {
   }, [playerName, router]);
 
   if (!dataAvailable) {
-    return null; // Ne rien rendre pendant la redirection
+    return null; 
   }
 
-  // Le reste de votre code pour afficher les données va ici...
-
+  
   return (
     <div className="p-8 text-white">
       <Undo2 className="cursor-pointer mb-5 text-white" onClick={() => router.back()} />
       <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
         {capitalizedPlayerName} Schedule
       </h1>
-      {/* Ajoutez ici votre code pour afficher les matchs */}
+      
     </div>
   );
 };
